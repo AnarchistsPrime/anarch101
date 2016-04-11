@@ -75,7 +75,7 @@ int64 nHPSTimerStart = 0;
 
 // Settings
 int64 nTransactionFee = 0;
-
+int64 nMinimumInputValue = DUST_HARD_LIMIT;
 
 
 //////////////////////////////////////////////////////////////////////////////
@@ -1131,7 +1131,6 @@ unsigned int DigiShield(const CBlockIndex* pindexLast, const CBlockHeader *pbloc
 {
     unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
 
-       int nHeight = pindexLast->nHeight + 1;
        int blockstogoback = 0;
 
        // Genesis block
